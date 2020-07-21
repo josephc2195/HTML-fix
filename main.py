@@ -7,7 +7,22 @@ app = Flask(__name__)
 @app.route('/')
 def index():
 	error = request.args.get('error')
-    return render_template('site.html', weather=None, error=error)
+	return render_template('fixtron.html', error=error)
 
-@app.route('/site')
-def site():
+@app.route('/get_message', methods=['POST'])
+def get_message():
+	try:
+		firstName = request.form['fname']
+		lastName = request.form['lname']
+		message = request.form['subject']
+		if message == '':
+			return redirect(url_for('index', error="Please fill out the message portion"))
+		else:
+			return redirect(url_for('typ'))
+	except:
+		return redirect(url_for('fixtron'))
+	print(message)
+
+port = int(os.environ.get("POST", 5000))
+if __name__ == '__main__':
+	app.run(threaded=True, port=port)
