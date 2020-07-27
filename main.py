@@ -1,13 +1,17 @@
 from flask import Flask, render_template, url_for, request, redirect
 import requests
 import os
+from flask_bootstrap import Bootstrap
 
 app = Flask(__name__)
+Bootstrap(app)
 
 @app.route('/')
 def index():
 	error = request.args.get('error')
-	return render_template('fixtron.html', error=error)
+	return render_template('index.html', error=error)
+
+@app.route('/fixtronix')
 
 @app.route('/get_message', methods=['POST'])
 def get_message():
@@ -22,6 +26,7 @@ def get_message():
 	except:
 		return redirect(url_for('fixtron'))
 	print(message)
+
 
 port = int(os.environ.get("POST", 5000))
 if __name__ == '__main__':
