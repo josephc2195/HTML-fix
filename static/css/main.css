@@ -1,9 +1,13 @@
 body {
-  background-color:rgb(10,130,101);
+  background-image: url("https://www.irepairmaine.com/wp-content/uploads/2017/05/aba.jpg");
+  background-size: cover;
   }
 
 h1 {
-  color: rgb(200,5,233);
+  color: #F7DA85;
+  font-size: 40px;
+  outline-style: ridge;
+  outline-color: #000000;
 }
 
 h5 {
