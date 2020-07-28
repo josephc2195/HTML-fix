@@ -2,7 +2,6 @@ from flask import Flask, render_template, url_for, request, redirect
 import requests
 import os
 from flask_bootstrap import Bootstrap
-import json
 
 app = Flask(__name__)
 Bootstrap(app)
