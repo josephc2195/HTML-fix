@@ -2,30 +2,35 @@
 <html>
 <head>
   <title>Fixtronix</title>
-  <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"/>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}"/>
 </head>
 <body>
-<center>
-<h1>Fixtronix</h1>
+  <header class="container">
+    <div class="row">
+      <h1 class="col-sm-4">Fixtronix</h1>
+    </div>
+  </header>
+<section class="jumbotron">
+  <center>
+    <div class="container">
+      <div class="row text-center">
+        <h5>To inquire about services, please fill this out:</h5>
+        <form action="{{ url_for('get_message') }}" method="POST">
+          <p></p>
+          <label for="firstName">First Name</label>
+          <input type='text' name="firstName" placeholder="Your first name.." />
+          <p></p>
+          <label for="lastName">Last Name</label>
+          <input type='text' name="lastName" placeholder="Your last name.." />
+          <p></p>
+          <label for="subject">Subject</label>
+          <textarea id="subject" name="subject" placeholder="Write something..." style="height:200px"></textarea>
+          <p></p>
+          <input type="submit" value="Submit" />
 
-<h5>To inquire about services please fill out this form:</h5>
-
-<div class="container">
-  <form action="{{ url_for('get_message') }}" method="POST">
-    <p></p>
-    <label for="firstName">First Name</label>
-    <input type='text' name="firstName" placeholder="Your first name.." />
-    <p></p>
-    <label for="lastName">Last Name</label>
-    <input type='text' name="lastName" placeholder="Your last name.." />
-    <p></p>
-    <label for="subject">Subject</label>
-    <textarea id="subject" name="subject" placeholder="Write something..." style="height:200px"></textarea>
-    <p></p>
-    <input type="submit" value="Submit" />
-
-  </form>
-</div>
+        </form>
+    </div>
 </center>
 
 </body>

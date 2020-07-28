@@ -1,6 +1,5 @@
 body {
-  background-image: url("https://www.irepairmaine.com/wp-content/uploads/2017/05/aba.jpg");
-  background-size: cover;
+
   }
 
 h1 {
@@ -11,4 +10,11 @@ h1 {
 
 h5 {
   color: #ffffff;
+}
+
+.jumbotron {
+  align-items: center;
+  background-image: url("https://www.irepairmaine.com/wp-content/uploads/2017/05/aba.jpg");
+  background-size: cover;
+
 }
