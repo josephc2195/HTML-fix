@@ -2,6 +2,7 @@ from flask import Flask, render_template, url_for, request, redirect
 import requests
 import os
 from flask_bootstrap import Bootstrap
+import json
 
 app = Flask(__name__)
 Bootstrap(app)
@@ -11,23 +12,24 @@ def index():
 	error = request.args.get('error')
 	return render_template('index.html', error=error)
 
-@app.route('/fixtronix')
-
-@app.route('/get_message', methods=['POST'])
+@app.route('/get_message', methods=['GET', 'POST'])
 def get_message():
-	try:
-		firstName = request.form['fname']
-		lastName = request.form['lname']
+	if request.method == 'POST':
+		firstName = request.form['firstName']
+		lastName = request.form['lastName']
 		message = request.form['subject']
-		if message == '':
-			return redirect(url_for('index', error="Please fill out the message portion"))
-		else:
-			return redirect(url_for('typ'))
-	except:
-		return redirect(url_for('fixtron'))
-	print(message)
+		print(firstName, lastName, message)
+		return redirect(url_for('typ'))
+
+	else:
+		return redirect(url_for('/'))
+
+@app.route('/typ')
+def typ():
+	error = request.args.get('error')
+	return render_template('typ.html', error=error)
 
 
-port = int(os.environ.get("POST", 5000))
+port = int(os.environ.get('POST', 5000))
 if __name__ == '__main__':
-	app.run(threaded=True, port=port)
+	app.run(threaded=True, port=port, debug=True)

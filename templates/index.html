@@ -8,18 +8,18 @@
 <h5>To inquire about services please fill out this form:</h5>
 
 <div class="container">
-  <form action="action_page.php">
+  <form action="{{ url_for('get_message') }}" method="POST">
     <p></p>
-    <label for="fname">First Name</label>
-    <input type="text" id="fname" name="firstname" placeholder="Your first name..">
+    <label for="firstName">First Name</label>
+    <input type='text' name="firstName" placeholder="Your first name.." />
     <p></p>
-    <label for="lname">Last Name</label>
-    <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+    <label for="lastName">Last Name</label>
+    <input type='text' name="lastName" placeholder="Your last name.." />
     <p></p>
     <label for="subject">Subject</label>
     <textarea id="subject" name="subject" placeholder="Write something..." style="height:200px"></textarea>
     <p></p>
-    <input type="submit" value="Submit">
+    <input type="submit" value="Submit" />
 
   </form>
 </div>
