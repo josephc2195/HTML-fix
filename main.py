@@ -15,10 +15,10 @@ def index():
 @app.route('/get_message', methods=['GET', 'POST'])
 def get_message():
 	if request.method == 'POST':
-		firstName = request.form['firstName']
-		lastName = request.form['lastName']
-		message = request.form['subject']
-		print(firstName, lastName, message)
+		name = request.form['name']
+		email = request.form['email']
+		phone = request.form['phone']
+		message = request.form['message']
 		return redirect(url_for('typ'))
 
 	else:

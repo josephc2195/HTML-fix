@@ -27,7 +27,7 @@
 	<div class="bg-contact2" style="background-image: url('https://www.irepairmaine.com/wp-content/uploads/2017/05/aba.jpg');">
 		<div class="container-contact2">
 			<div class="wrap-contact2">
-				<form class="contact2-form validate-form">
+				<form class="contact2-form validate-form" action="{{ url_for('get_message') }}" method="POST">
 					<span class="contact2-form-title">
 						For inquries please fill out form:
 					</span>
