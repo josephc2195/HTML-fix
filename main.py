@@ -19,6 +19,7 @@ def get_message():
 		email = request.form['email']
 		phone = request.form['phone']
 		message = request.form['message']
+		
 		return redirect(url_for('typ'))
 
 	else:

@@ -134,6 +134,17 @@ iframe {
 
 /*//////////////////////////////////////////////////////////////////
 [ Contact 2 ]*/
+.header-container-wrapper {
+	background-color: red;
+}
+
+.col-sm-4 {
+  padding: 10px;
+  font-family: Poppins-Bold;
+  font-size: 40px;
+
+}
+
 .bg-contact2 {
   width: 100%;
   background-repeat: no-repeat;
@@ -160,12 +171,12 @@ iframe {
   /*
   this is where i can add opacity to background
   */
-  background: linear-gradient(45deg, rgba(213,0,125,0.65), rgba(229,57,53,0.65));
+  background: linear-gradient(45deg, rgba(245,187,140,0.5), rgba(245,187,140,0.5));
 }
 
 .wrap-contact2 {
   width: 790px;
-  background: rgba(255,255,255,.8);
+  background: rgba(255,255,255,.45);
   border-radius: 50px;
   overflow: hidden;
   padding: 72px 55px 90px 55px;
