@@ -21,6 +21,8 @@
 }
 
 
+
+
 /*//////////////////////////////////////////////////////////////////
 [ RESTYLE TAG ]*/
 
@@ -33,18 +35,6 @@
 body, html {
 	height: 100%;
 	font-family: Poppins-Regular, sans-serif;
-}
-
-header {
-  background: linear-gradient(-135deg, #d5007d, #e53935);
-  width: 100%;
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: cover;
-}
-
-header .row {
-  
 }
 
 /*---------------------------------------------*/
